@@ -1,0 +1,113 @@
+<div class="row margin-bottom: 64px">
+    <div class="col-8">
+        <section class="example-container mat-elevation-z8" tabindex="0">
+            <table mat-table [dataSource]="dataSource">
+
+              <!-- Asset Id -->
+              <ng-container matColumnDef="assetId">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.assetId}} </td>
+              </ng-container>
+
+               <!-- Asset Code -->
+               <ng-container matColumnDef="assetCode">
+                <th mat-header-cell *matHeaderCellDef> Asset Code </th>
+                <td mat-cell *matCellDef="let element"> {{element.assetCode}} </td>
+              </ng-container>
+
+              <!-- Asset Name -->
+              <ng-container matColumnDef="assetName">
+                <th mat-header-cell *matHeaderCellDef> Asset Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.assetName}} </td>
+              </ng-container>
+
+              <!-- Asset Qty -->
+              <ng-container matColumnDef="assetQunatity">
+                <th mat-header-cell *matHeaderCellDef> Asset Qty </th>
+                <td mat-cell *matCellDef="let element"> {{element.assetQunatity}} </td>
+              </ng-container>
+
+              <!-- Asset Description -->
+              <ng-container matColumnDef="assetDescription">
+                <th mat-header-cell *matHeaderCellDef> Asset Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.assetDescription}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="assetStatus">
+                <th mat-header-cell *matHeaderCellDef> Asset Status </th>
+                <td mat-cell *matCellDef="let element"> {{element.assetStatus}} </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          </section>
+    </div>
+
+    <div class="col-4">
+        <form>
+            <mat-form-field class="form__input">
+                <div class="mat-form-field-wrapper">
+                    <div class="mat-form-field-flex">
+                        <input matInput type="input" [formControl]="assetCode"
+                            class="mat-input-element mat-form-field-autofill-control" required
+                            placeholder="Asset Code" aria-required="true">
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field class="form__input">
+                <div class="mat-form-field-wrapper">
+                    <div class="mat-form-field-flex">
+                        <input matInput type="input" [formControl]="assetName"
+                            class="mat-input-element mat-form-field-autofill-control" required
+                            placeholder="Asset Name" aria-required="true">
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field class="form__input">
+                <div class="mat-form-field-wrapper">
+                    <div class="mat-form-field-flex">
+                        <input matInput type="input" [formControl]="assetQty"
+                            class="mat-input-element mat-form-field-autofill-control" required
+                            placeholder="Asset Qty" aria-required="true">
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field class="form__input">
+                <div class="mat-form-field-wrapper">
+                    <div class="mat-form-field-flex">
+                        <input matInput type="input" [formControl]="assetDescription"
+                            class="mat-input-element mat-form-field-autofill-control" required
+                            placeholder="Asset Description" aria-required="true">
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field class="form__input">
+                <div class="mat-form-field-wrapper">
+                    <div class="mat-form-field-flex">
+                        <input matInput type="input" [formControl]="assetStatus"
+                            class="mat-input-element mat-form-field-autofill-control" required
+                            placeholder="Asset Status" aria-required="true">
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field class="form__input">
+                <mat-label>Asset Status</mat-label>
+                <mat-select>
+                    <mat-option>Select Asset Status</mat-option>
+                  <mat-option [value]="1">Active</mat-option>
+                  <mat-option [value]="2">InActive</mat-option>
+                </mat-select>
+              </mat-form-field>
+            <div class="row">
+                <div class="col-6">
+                    <button mat-raised-button color="primary">Create Asset</button>
+                </div>
+                <div class="col-6">
+                    <button mat-raised-button color="primary">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

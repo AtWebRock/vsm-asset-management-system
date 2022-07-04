@@ -1,0 +1,24 @@
+.example-container {
+    height: 400px;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+  }
+
+  .form__input {
+    width: 100%; margin-top: 2px;
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: 0px;
+}
+
+.mat-form-field-flex {
+    display: inline-flex; align-items: baseline; box-sizing: border-box; width: 100%
+}
+
+.form-actions-btn-right {
+    display: flex; align-items: center;
+}

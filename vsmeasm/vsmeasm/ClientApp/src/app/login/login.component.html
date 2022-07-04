@@ -1,0 +1,106 @@
+<div class="row login-page">
+    <div class="content-block">
+        <div class="content-wrapper">
+            <mat-tab-group mat-align-tabs="start" class="mat-tab-group">
+                <mat-tab label="Login">
+                    <div class="welcome-label">
+                        <h1>Welcome!</h1>
+                    </div>
+                    <div class="google-button-wrapper">
+                        <span>
+                            <img class="google-button" src="./assets/img/google.svg">
+                            Sign in with Google
+                        </span>
+                    </div>
+                    <div class="border-wrapper">
+                        <div class="border-line"></div>
+                        <p class="border-title">or</p>
+                        <div class="border-line"></div>
+                    </div>
+                    <form>
+                        <mat-form-field class="form__input">
+                            <div class="mat-form-field-wrapper">
+                                <div class="mat-form-field-flex">
+                                    <input matInput type="email" [formControl]="email"
+                                        class="mat-input-element mat-form-field-autofill-control" required
+                                        placeholder="Email Address" aria-required="true">
+                                </div>
+                            </div>
+                        </mat-form-field>
+                        <mat-form-field class="form__input">
+                            <div class="mat-form-field-wrapper">
+                                <div class="mat-form-field-flex">
+                                    <input matInput type="password" [formControl]="password"
+                                        class="mat-input-element mat-form-field-autofill-control" required
+                                        placeholder="Password" aria-required="true">
+                                </div>
+                            </div>
+                        </mat-form-field>
+                        <div class="form-actions">
+                            <!-- <button mat-raised-button color="primary">Login</button> -->
+                            <a mat-raised-button href='/home-content' color="primary">Login</a>
+                            <button mat-button color="primary">Forget Password</button>
+                        </div>
+                    </form>
+                </mat-tab>
+                <mat-tab label="New User">
+                    <div class="welcome-label">
+                        <h1>Welcome!</h1>
+                    </div>
+                    <div class="welcome-label-sub-title">
+                        <h1>Create you account</h1>
+                    </div>
+                    <form>
+                        <mat-form-field class="form__input">
+                            <div class="mat-form-field-wrapper">
+                                <div class="mat-form-field-flex">
+                                    <input matInput type="email" [formControl]="email"
+                                        class="mat-input-element mat-form-field-autofill-control" required
+                                        placeholder="Email Address" aria-required="true">
+                                </div>
+                            </div>
+                        </mat-form-field>
+                        <mat-form-field class="form__input">
+                            <div class="mat-form-field-wrapper">
+                                <div class="mat-form-field-flex">
+                                    <input matInput type="password" [formControl]="password"
+                                        class="mat-input-element mat-form-field-autofill-control" required
+                                        placeholder="Password" aria-required="true">
+                                </div>
+                            </div>
+                        </mat-form-field>
+                        <mat-form-field class="form__input">
+                            <div class="mat-form-field-wrapper">
+                                <div class="mat-form-field-flex">
+                                    <input matInput type="confirm_password" [formControl]="confirm_password"
+                                        class="mat-input-element mat-form-field-autofill-control" required
+                                        placeholder="Confirm Password" aria-required="true">
+                                </div>
+                            </div>
+                        </mat-form-field>
+                        <div class="form-actions-new-user">
+                            <button class="btn-create-account" mat-raised-button color="primary">Create your
+                                account</button>
+                        </div>
+                        <div class="border-wrapper">
+                            <div class="border-line"></div>
+                            <p class="border-title">or</p>
+                            <div class="border-line"></div>
+                        </div>
+                        <div class="google-button-wrapper">
+                            <span>
+                                <img class="google-button" src="./assets/img/google.svg">
+                                Sign in with Google
+                            </span>
+                        </div>
+                    </form>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+    <div class="login_page_logo">
+        <div class="login-page_logo_wrapper">
+            <!-- <img src="./assets/img/1631388037090.jfif"> -->
+        </div>
+    </div>
+</div>
